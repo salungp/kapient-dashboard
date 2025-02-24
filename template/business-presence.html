@@ -22,6 +22,15 @@
             .accordion-button::after {
                 display: none; /* Hides the chevron */
             }
+
+            .nav-pills .nav-link {
+                border: 1px solid #dedede;
+                margin-right: 16px;
+            }
+
+            .nav-pills .active {
+                border: 1px solid #537aef;
+            }
         </style>
 
     </head>
@@ -466,11 +475,7 @@
                                         </a>
                                     </li>
                                 </ul>
-
-                                <!-- right side -->
-                                 <div class="d-flex">                                    
-                                    <button type="button" class="btn btn-primary" style="width: 110px;">Fix it now</button>
-                                 </div>
+                                
                             </div><!-- end card header -->
                         </div>
 
@@ -505,7 +510,7 @@
 
                                             <div class="row" style="width: 70%;">
 
-                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 120px; margin-bottom: 20px;">
+                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 120px; margin-bottom: 30px;">
 
                                                 <!-- Rating progress bar -->
 
@@ -582,12 +587,201 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex align-items-center">
-                                            <h5 class="card-title mb-0">Reviews analytics</h5>
+                                            <h5 class="card-title mb-0" style="margin-right: 24px;">Reviews analytics</h5>
+
+                                            <!-- tab list -->
+                                            <ul class="nav nav-pills" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link active" data-bs-toggle="tab" href="#navpills-home" role="tab" aria-selected="true">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-home-account"></i></span>
+                                                        <span class="d-none d-sm-block">All reviews</span> 
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#navpills-profile" role="tab" aria-selected="false" tabindex="-1">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-account-outline"></i></span>
+                                                        <span class="d-none d-sm-block"><i class="mdi mdi-star" style="color: #EB9D59;"></i> 5</span> 
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#navpills-profile" role="tab" aria-selected="false" tabindex="-1">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-account-outline"></i></span>
+                                                        <span class="d-none d-sm-block"><i class="mdi mdi-star" style="color: #EB9D59;"></i> 4</span> 
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#navpills-profile" role="tab" aria-selected="false" tabindex="-1">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-account-outline"></i></span>
+                                                        <span class="d-none d-sm-block"><i class="mdi mdi-star" style="color: #EB9D59;"></i> 3</span> 
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#navpills-profile" role="tab" aria-selected="false" tabindex="-1">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-account-outline"></i></span>
+                                                        <span class="d-none d-sm-block"><i class="mdi mdi-star" style="color: #EB9D59;"></i> 2</span> 
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#navpills-profile" role="tab" aria-selected="false" tabindex="-1">
+                                                        <span class="d-block d-sm-none"><i class="mdi mdi-account-outline"></i></span>
+                                                        <span class="d-none d-sm-block"><i class="mdi mdi-star" style="color: #EB9D59;"></i> 1</span> 
+                                                    </a>
+                                                </li>
+
+                                            </ul>
                                         </div>
                                     </div>
     
                                     <div class="card-body">
-                                       
+        
+                                        <!-- Tab panes -->
+                                        <div class="tab-content p-3 text-muted">
+                                            <div class="tab-pane active show" id="navpills-home" role="tabpanel">
+
+                                                <!-- Reviews content -->
+                                                <div class="row">
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Samantha William</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Mira Korsgaard</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Marilyn Workman</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Samantha William</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Samantha William</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="d-flex" style="border: 1px solid #dedede; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+                                                            <img src="../dist/assets/images/profile-review.png" alt="" style="width: 40px; height: 40px; border-radius: 8888px; margin-right: 16px;">
+                                                            <div>
+                                                                <h2 style="font-size: 16px; margin-bottom: 2px; color: #323D48;">Samantha William</h2>
+                                                                <p style="font-size: 14px; color: #7D8496; margin-bottom: 2px; font-weight: normal;">4 reviews · 2 photos</p>
+                                                                <div class="stars" style="margin-bottom: 6px;">
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                    <i class="mdi mdi-star" style="color: #EB9D59;"></i>
+                                                                </div>
+                                                                <p style="color: #323D48;">Pan mozzarella bacon sautéed marinara roll mushrooms dolor Hawaiian Aussie. Mouth Philly white stuffed ipsum. Marinara burnt fresh fresh marinara tomato style. Pie.</p>
+                                                                <img src="../dist/assets/images/google-logo.png" alt="Google logo for reviews source" style="width: 92px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+
+                                                </div>
+
+
+                                            </div><!-- end tab pane -->
+                                            <div class="tab-pane" id="navpills-profile" role="tabpanel">
+                                                <p class="mb-0">
+                                                    Raw denim you probably haven't heard of them jean shorts Austin.
+                                                    Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                                    cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                                    butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                                    qui irure terry richardson ex squid. Cosby sweater eu banh mi,
+                                                    qui irure terry richardson ex squid. 
+                                                </p>
+                                            </div><!-- end tab pane -->
+                                            <div class="tab-pane" id="navpills-messages" role="tabpanel">
+                                                <p class="mb-0">
+                                                    Vivamus consectetur justo non mi vehicula, nec fermentum turpis blandit. 
+                                                    Pellentesque habitant morbi tristique senectus et netus et malesuada 
+                                                    fames ac turpis egestas. Maecenas accumsan sem eget magna aliquet, 
+                                                    sed fermentum nisi mattis. Aenean a quam nec mauris cursus accumsan,
+                                                    Curabitur fermentum nisi non est ultricies. Cosby sweater eu banh mi,
+                                                    qui irure terry richardson ex squid.
+                                                </p>
+                                            </div><!-- end tab pane -->
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -660,15 +854,15 @@
                 stroke: {
                     curve: 'smooth'
                 },
-                            fill: {
-                                type: "gradient",
-                                gradient: {
-                                shadeIntensity: 1,
-                                opacityFrom: 0.7,
-                                opacityTo: 0.9,
-                                stops: [0, 90, 100]
-                                }
-                            },
+                fill: {
+                    type: "gradient",
+                    gradient: {
+                        shadeIntensity: 1,
+                        opacityFrom: 0.7,
+                        opacityTo: 0.9,
+                        stops: [0, 90, 100]
+                    }
+                }
             }
 
             var reviewsAnalyticsOptions = {
@@ -694,7 +888,7 @@
                         y: 200000
                     },{
                         x: '20k',
-                        y: 180000
+                        y: 110000
                     },{
                         x: '20k',
                         y: 182000
